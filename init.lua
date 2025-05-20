@@ -217,7 +217,10 @@ require('lazy').setup({
   require 'kickstart_default.plugins.blink',
 
   -- Colorscheme
-  require 'kickstart_default.plugins.tokyonight',
+  -- require 'kickstart_default.plugins.tokyonight',
+  -- require 'custom.plugins.gruvbox,
+  require 'custom.plugins.lualine',
+  require 'custom.plugins.gruvbox-material',
 
   -- Highlight todo, notes, etc in comments
   require 'kickstart_default.plugins.todo-comments',
