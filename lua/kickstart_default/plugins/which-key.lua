@@ -48,6 +48,10 @@ return {
       { '<leader>s', group = '[S]earch' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      { '<leader>d', group = '[D]ebuger' },
+      { '<leader>l', group = '[L]inter'}, 
+      { '<leader>n', group = 'Swap with [N]ext'},
+      { '<leader>p', group = 'Swap with [P]revious'},
     },
   },
 }
