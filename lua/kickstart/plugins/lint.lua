@@ -2,11 +2,31 @@ return {
 
   { -- Linting
     'mfussenegger/nvim-lint',
+
+    dependencies = {
+      'rshkarin/mason-nvim-lint',
+      config = function()
+        require('mason-nvim-lint').setup {
+          -- If u want to be sure
+          -- ensure_installed = { 'markdownlint' },
+          automatic_installation = true,
+        }
+      end,
+    },
+
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        python = { 'ruff' },
+      }
+
+      -- Configure ruff python linter
+      local ruff = lint.linters.ruff
+      ruff.args = {
+        '--extend-select',
+        'I',
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -55,6 +75,10 @@ return {
           end
         end,
       })
+
+      vim.keymap.set('n', '<leader>ll', function()
+        lint.try_lint()
+      end, { desc = 'Trigger linting for current file' })
     end,
   },
 }
