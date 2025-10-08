@@ -13,6 +13,7 @@ return {
         { "<leader>de", function() require("dapui").eval() end, desc = "Eval", mode = {"n", "v"} },
       },
     },
+    'theHamsta/nvim-dap-virtual-text',
 
     -- Required dependency for nvim-dap-ui
     'nvim-neotest/nvim-nio',
@@ -123,6 +124,8 @@ return {
         detached = vim.fn.has 'win32' == 0,
       },
     }
+
+    require('nvim-dap-virtual-text').setup()
 
     -- Setup python debugger
     require('dap-python').setup()

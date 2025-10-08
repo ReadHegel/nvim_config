@@ -210,16 +210,16 @@ require('lazy').setup({
   require 'kickstart_default.plugins.telescope',
 
   -- LSP Plugins
-  require 'kickstart_default.plugins.lazydev',
-  require 'kickstart_default.plugins.nvim-lspconfig',
+  require 'lsp.plugins.lspconfig',
+  require 'lsp.plugins.blink',
+  -- additional lsp plugins
+  require 'lsp.plugins.additional.lazydev',
 
   -- Autoformat
   require 'kickstart_default.plugins.conform',
 
-  -- Autocompletion
-  require 'kickstart_default.plugins.blink',
 
-  -- Colorscheme
+  -- Colorschem
   -- require 'kickstart_default.plugins.tokyonight',
   -- require 'custom.plugins.gruvbox,
   require 'custom.plugins.lualine',
