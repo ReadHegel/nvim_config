@@ -127,6 +127,6 @@ return {
       workspaceFolders = true,
     },
   },
-  cmd = { 'clangd', '--background-index' },
+  cmd = { 'clangd', '--background-index', '--enable-config' },
   filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
 }
