@@ -60,7 +60,7 @@ return {
 
       -- Prevent colision with tmux prefix 
       ['<C-space>'] = {},
-      ['<C-h>'] = { 'show', 'show_documentation', 'hide_documentation' },
+      ['<C-c>'] = { 'show', 'show_documentation', 'hide_documentation' },
 
       -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
       --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
