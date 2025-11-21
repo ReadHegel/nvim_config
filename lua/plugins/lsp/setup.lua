@@ -144,9 +144,9 @@ function M.setup()
     -- ts_ls = {},
     --
 
-    lua_ls = require 'lsp.servers.lua_ls',
-    pylsp = require 'lsp.servers.pylsp',
-    clangd = require 'lsp.servers.clangd',
+    lua_ls = require 'plugins.lsp.servers.lua_ls',
+    pylsp = require 'plugins.lsp.servers.pylsp',
+    clangd = require 'plugins.lsp.servers.clangd',
   }
 
   for name, config in pairs(servers) do

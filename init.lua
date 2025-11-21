@@ -147,76 +147,80 @@ vim.opt.rtp:prepend(lazypath)
 --  To update plugins you can run
 --    :Lazy update
 --
-require('lazy').setup({
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-
-  -- Mason must be loaded before its dependents so we need to set it up here.
-  require 'kickstart_default.plugins.mason',
-
-  -- See `:help gitsigns` to understand what the configuration keys do
-  require 'kickstart.plugins.gitsigns',
-
-  require 'kickstart_default.plugins.which-key',
-
-  require 'kickstart_default.plugins.telescope',
-
-  -- LSP Plugins
-  require 'lsp.plugins.lspconfig',
-  require 'lsp.plugins.blink',
-  -- additional lsp plugins
-  require 'lsp.plugins.additional.lazydev',
-
-  -- Autoformat
-  require 'kickstart_default.plugins.conform',
-
-  -- Colorscheme
-  require 'colors.gruvbox-material',
-
-  -- Status line
-  require 'custom.plugins.lualine',
-
-  -- Vim tmux integration
-  require 'custom.plugins.vim-tmux-navigator',
-
-  -- Highlight todo, notes, etc in comments
-  require 'kickstart_default.plugins.todo-comments',
-
-  -- Collection of various small independent plugins/modules
-  require 'kickstart_default.plugins.mini',
-
-  -- Highlight, edit, and navigate code
-  require 'kickstart_default.plugins.nvim-treesitter',
-
-  require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  require 'kickstart.plugins.lint',
-  require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
-
-  -- Some custom plugins
-  require 'custom.plugins.vimbegood',
-  require 'custom.plugins.venvselector',
-}, {
-  ui = {
-    -- If you are using a Nerd Font: set icons to an empty table which will use the
-    -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  --
+  -- -- Mason must be loaded before its dependents so we need to set it up here.
+  -- require 'kickstart_default.plugins.mason',
+  --
+  -- -- See `:help gitsigns` to understand what the configuration keys do
+  -- require 'kickstart.plugins.gitsigns',
+  --
+  -- require 'kickstart_default.plugins.which-key',
+  --
+  -- require 'kickstart_default.plugins.telescope',
+  --
+  -- -- LSP Plugins
+  -- require 'lsp.plugins.lspconfig',
+  -- require 'lsp.plugins.blink',
+  -- -- additional lsp plugins
+  -- require 'lsp.plugins.additional.lazydev',
+  --
+  -- -- Autoformat
+  -- require 'kickstart_default.plugins.conform',
+  --
+  -- -- Colorscheme
+  -- require 'colors.gruvbox-material',
+  --
+  -- -- Status line
+  -- require 'custom.plugins.lualine',
+  --
+  -- -- Vim tmux integration
+  -- require 'custom.plugins.vim-tmux-navigator',
+  --
+  -- -- Highlight todo, notes, etc in comments
+  -- require 'kickstart_default.plugins.todo-comments',
+  --
+  -- -- Collection of various small independent plugins/modules
+  -- require 'kickstart_default.plugins.mini',
+  --
+  -- -- Highlight, edit, and navigate code
+  -- require 'kickstart_default.plugins.nvim-treesitter',
+  --
+  -- require 'kickstart.plugins.debug',
+  -- -- require 'kickstart.plugins.indent_line',
+  -- require 'kickstart.plugins.lint',
+  -- require 'kickstart.plugins.autopairs',
+  -- require 'kickstart.plugins.neo-tree',
+  --
+  -- -- Some custom plugins
+  -- require 'custom.plugins.vimbegood',
+  -- require 'custom.plugins.venvselector',
+require('lazy').setup(
+  require("plugins"),
+  {
+    ui = {
+      -- If you are using a Nerd Font: set icons to an empty table which will use the
+      -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
+      icons = vim.g.have_nerd_font and {} or {
+        cmd = '⌘',
+        config = '🛠',
+        event = '📅',
+        ft = '📂',
+        init = '⚙',
+        keys = '🗝',
+        plugin = '🔌',
+        runtime = '💻',
+        require = '🌙',
+        source = '📄',
+        start = '🚀',
+        task = '📌',
+        lazy = '💤 ',
+      },
     },
-  },
-})
+  }
+)
+
+require('plugins.health')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

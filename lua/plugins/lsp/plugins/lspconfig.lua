@@ -16,6 +16,6 @@ return {
     'saghen/blink.cmp',
   },
   config = function()
-    require('lsp.setup').setup()
+    require('plugins.lsp.setup').setup()
   end,
 }
