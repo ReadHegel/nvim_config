@@ -2,7 +2,7 @@ local categories = {
   "coding",
   "colors",
   "editor",
-  "formatting",
+  "formating",
   "linting",
   "lsp",
   "treesitter",
