@@ -1,10 +1,11 @@
 return {
-  "folke/snacks.nvim",
+  'folke/snacks.nvim',
   opts = {
     indent = { enabled = true },
     input = { enabled = true },
     notifier = { enabled = true },
     scope = { enabled = true },
+    image = { enabled = true },
     scroll = { enabled = true },
     statuscolumn = { enabled = false },
     -- toggle = { map = LazyVim.safe_keymap_set },

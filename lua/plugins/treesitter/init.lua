@@ -1,2 +1,1 @@
-return require('plugins.treesitter.nvim-treesitter')
-
+return require 'plugins.treesitter.nvim-treesitter'
