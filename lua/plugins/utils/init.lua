@@ -1,4 +1,5 @@
 return {
+  require('plugins.utils.sshfs'),
   require('plugins.utils.mini'),
   require('plugins.utils.todo-comments'),
   require('plugins.utils.venvselector'),
